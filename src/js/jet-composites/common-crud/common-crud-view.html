@@ -1,0 +1,50 @@
+<!--
+  Copyright (c) 2015, 2018, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+<div id="crud">
+	  
+	
+	<p data-bind="text:messageText"></p>
+	<h3 data-bind="text : $properties.showName"></h3>
+
+
+
+	<oj-toolbar id='myToolbar'>
+		<div data-bind="if: refreshButton">
+			<oj-button id="refreshButton" chroming='full' on-oj-action="[[refreshMsg]]">Refresh</oj-button>
+		</div>
+		<div data-bind="if: createButton">
+			<oj-button id="createButton" chroming='full' on-oj-action="[[createClick]]">Create</oj-button>
+		</div>
+		<div data-bind="if: updateButton">
+			<oj-button id="updateButton" chroming='full' on-oj-action="[[updateClick]]">Update</oj-button>
+		</div>
+		<div data-bind="if: deleteButton">
+			<oj-button id="deleteButton" chroming='full' on-oj-action="[[deleteClick]]">Delete</oj-button>
+		</div>
+		<oj-button id="deleteAllButton" chroming='full' on-oj-action="[[deleteAllClick]]">Delete All</oj-button>
+	</oj-toolbar>
+
+
+
+	<hr>
+	<oj-input-text id="filter" maxlength="30" placeholder="Type to filter"></oj-input-text>
+	<oj-button id="clearButton"
+               on-oj-action='[[clearClick]]'
+               display='icons'
+               chroming='half'>
+        <span slot='startIcon' class='oj-fwk-icon oj-fwk-icon-cross03'></span>
+        Clear
+    </oj-button>
+	<div id="pagingControlDemo">
+	    <oj-table id='table' aria-label='Departments Table'
+	           data='[[pagingDatasource]]'
+	           on-oj-before-current-row='[[beforeCurrentRowListener]]'
+	           columns='{{columnArray}}'
+	           style='width: 100%;'>
+	        <oj-paging-control id="paging" data='[[pagingDatasource]]' page-size='[[pageSize]]' slot='bottom'>
+	        </oj-paging-control>
+	    </oj-table>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+<!-- Messages -->
+<oj-messages id="oj-messages-id" messages="{{applicationMessages}}" display="general"
+               on-oj-close="[[closeMessageHandler]]"   
+               position="[[messagePosition]]">
+</oj-messages>
+
+<common-crud id="myCommonCrud" roles='[[roles]]' datasource="{{datasource}}" pagesize='[[pagesize]]'  on-create-click="[[demoCreate]]" on-update-click="[[demoUpdate]]" on-delete-click="[[demoDelete]]" on-refresh-msg="[[demoRefresh]]" 
+
+show-name="[[buttons]]" ></common-crud>
+
+
+</div>

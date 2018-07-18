@@ -1,0 +1,8 @@
+common-crud:not(.oj-complete){
+  visibility: hidden;
+}
+
+common-crud{
+	min-height: 50px;
+	width: 50px;
+}

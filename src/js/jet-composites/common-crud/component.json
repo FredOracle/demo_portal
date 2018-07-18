@@ -1,0 +1,114 @@
+{
+  "name": "common-crud",
+  "displayName": "common-crud",
+  "description": "Describe your component here",
+  "version": "1.0.0",
+  "jetVersion": "5.0.0",
+  "properties": {
+
+    "showName": {
+        "description": "",
+        "type": "string"
+    },
+    "roles": {
+      "description": "The list of header titles to use for the columns in index order.",
+      "type": "Array<string>"
+    },
+    "datasource": {
+      "description": "",
+      "type": "Array<object>"
+    },
+    "pagesize": {
+      "description": "",
+      "type": "number"
+    }
+
+
+  },
+  "methods": {
+
+
+
+
+    "flipCard": {
+      "description": "Method to toggle flipping a card."
+    },
+    "refreshMsg": {
+      "description": "Method to toggle flipping a card."
+    },
+    "createClick": {
+      "description": "Method to toggle flipping a card."
+    },
+    "updateClick": {
+      "description": "Method to toggle flipping a card."
+    },
+    "deleteClick": {
+      "description": "Method to toggle flipping a card."
+    }
+
+
+
+    
+
+  }, 
+  "events": {
+
+
+
+
+    "refreshMsg": {
+      "description": "Triggered when a button is clicked.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The value of the card.",
+          "type": "string"
+        }
+      }
+    },
+    "createClick": {
+      "description": "Triggered when a button is clicked.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The value of the card.",
+          "type": "string"
+        }
+      }
+    },
+    "updateClick": {
+      "description": "Triggered when a button is clicked.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The value of the card.",
+          "type": "string"
+        }
+      }
+    },
+    "deleteClick": {
+      "description": "Triggered when a button is clicked.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The value of the card.",
+          "type": "string"
+        }
+      }
+    }
+
+
+
+
+
+
+  }, 
+  "slots": {
+
+
+     "columnA": {
+        "description": "The first column in this component's three column layout."
+      }
+
+  }
+}
